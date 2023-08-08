@@ -1,0 +1,52 @@
+---
+title: "eds212-day2-comp1"
+format: html
+editor: visual
+---
+
+## Derivatives in R
+
+```{r}
+fx <- expression(3.1 * x^4 - 28 * x)
+
+#this is storing the derivative expression
+df_dx <- D(fx, 'x')
+
+#this calls it back (show me)
+df_dx
+
+x <- 10
+
+eval(df_dx)
+
+```
+
+you try! Find the slope of g(z) = 2z^3^ - 10.5z\^2 + 4.1 at z=3.6
+
+```{r}
+gz <- expression(2 * z^3 - 10.5 * z^2 + 4.1)
+
+#this is storing the derivative expression
+df_dz <- D(gz, 'z')
+
+#this calls it back (show me)
+df_dz
+
+z <- 3.6
+
+eval(df_dz)
+```
+
+```{r}
+gt <- expression(2 * t^3 - 10.5 * t^2 + 4.1)
+
+#this is storing the derivative expression
+df_dt <- D(gt, 't')
+
+#this calls it back (show me)
+df_dt
+
+t <- seq(from = 1, to = 3, length = 20)
+
+eval(df_dt)
+```
